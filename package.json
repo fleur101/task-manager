@@ -6,7 +6,11 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
-    "start-db": "/Users/acer/mongodb/bin/mongod --dbpath=/Users/acer/mongodb-data"
+    "start-db": "/Users/acer/mongodb/bin/mongod --dbpath=/Users/acer/mongodb-data",
+    "test": "env-cmd -f ./config/test.env jest --watch --runInBand"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +28,8 @@
   },
   "devDependencies": {
     "env-cmd": "^10.0.1",
-    "nodemon": "^1.18.9"
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.9",
+    "supertest": "^3.4.1"
   }
 }
